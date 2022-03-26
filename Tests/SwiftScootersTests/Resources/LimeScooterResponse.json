@@ -1,0 +1,33 @@
+{
+    "last_updated": 1648244799,
+    "ttl": 0,
+    "version": "1.0",
+    "data": {
+        "bikes": [
+            {
+                "bike_id": "aea1f46e-ca46-45a4-be61-e12d9459188c",
+                "lat": 45.4957,
+                "lon": -122.672,
+                "is_reserved": 0,
+                "is_disabled": 0,
+                "vehicle_type": "scooter"
+            },
+            {
+                "bike_id": "26420bbf-7ff3-4e19-bacf-1a032e146395",
+                "lat": 45.5242,
+                "lon": -122.6726,
+                "is_reserved": 0,
+                "is_disabled": 0,
+                "vehicle_type": "scooter"
+            },
+            {
+                "bike_id": "c3ed7155-f5cd-41f3-b405-4aa9956f0a6a",
+                "lat": 45.5579,
+                "lon": -122.7314,
+                "is_reserved": 0,
+                "is_disabled": 0,
+                "vehicle_type": "scooter"
+            }
+        ]
+    }
+}
