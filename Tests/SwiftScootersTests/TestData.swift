@@ -8,7 +8,8 @@
 import Foundation
 
 public final class TestData {
-    public static let scooterJSON: URL = Bundle.module.url(forResource: "LimeScooterResponse", withExtension: "json")!
+    public static let limeDataJSON: URL = Bundle.module.url(forResource: "LimeScooterResponse", withExtension: "json")!
+    public static let spinDataJSON: URL = Bundle.module.url(forResource: "SpinScooterResponse", withExtension: "json")!
 }
 
 internal extension URL {
