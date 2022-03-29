@@ -2,7 +2,7 @@
 import Alamofire
 import SwiftyJSON
 
-protocol ScooterClient {
+protocol Client {
     var sessionManager: Alamofire.Session { get set }
     var onSuccess: ((JSON?) -> Void)? { get set }
     var onFailure: ((Int?, String?) -> Void)? { get set }
@@ -11,7 +11,7 @@ protocol ScooterClient {
     func handleResponse(_ response: AFDataResponse<String>) -> Void
 }
 
-extension ScooterClient {
+extension Client {
     func handleResponse(_ response: AFDataResponse<String>) -> Void {
         switch response.result {
         case .success(let value):

@@ -1,0 +1,28 @@
+{
+    "version": "1.1",
+    "data": {
+        "bikes": [
+            {
+                "bike_id": "9458cc72-495b-41c2-bfe2-1988bef6eae0",
+                "lat": 45.49922166666667,
+                "lon": -122.64447,
+                "is_disabled": 0,
+                "is_reserved": 0
+            },
+            {
+                "bike_id": "42b10e8b-21bb-4c90-8e15-c0cc44bd8f36",
+                "lat": 45.520165,
+                "lon": -122.67443166666665,
+                "is_disabled": 0,
+                "is_reserved": 0
+            },
+            {
+                "bike_id": "285e454f-1a5b-4934-add8-8e0f24d485a0",
+                "lat": 45.50765228333333,
+                "lon": -122.67393493333333,
+                "is_disabled": 0,
+                "is_reserved": 0
+            }
+        ]
+    }
+}
