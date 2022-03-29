@@ -36,6 +36,9 @@ let package = Package(
                 .copy("Resources/SpinScooterResponse.json"),
                 .copy("Resources/BirdScooterResponse.json"),
                 .copy("Resources/BoltScooterResponse.json"),
+                .copy("Resources/BiketownResponse.json"),
+                .copy("Resources/BiketownStationInformationResponse.json"),
+                .copy("Resources/BiketownStatusInformation.json")
             ]
         ),
     ]

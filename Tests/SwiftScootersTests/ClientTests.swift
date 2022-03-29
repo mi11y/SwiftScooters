@@ -230,4 +230,166 @@ class ClientTests: XCTestCase {
         
         wait(for: [expectation], timeout: 2.0)
     }
+    
+    func testFetchBiketownOnSuccess() {
+        let mockConfiguration = MockConfiguration.init()
+        mockConfiguration.setStatusCode(200)
+        mockConfiguration.setDataResponse(TestData.biketownDataJSON.data)
+        mockConfiguration.setAPIURL(ServiceLocator.biketownConfig())
+        
+        let session = mockConfiguration.mockAPIResponse()
+
+        let expectation = self.expectation(description: "The correct endpoint was called")
+        guard let expectedJSON = try? JSON(data: TestData.biketownDataJSON.data) else { XCTFail("Failed to parse test JSON"); return }
+
+        let client = ScooterClient(
+            sessionManager: session,
+            serviceLocatorURL: ServiceLocator.biketownConfig()
+        )
+        
+        client.onSuccess = { (actualResponse: JSON?) -> Void in
+            XCTAssertNotNil(actualResponse)
+            XCTAssertEqual(actualResponse, expectedJSON)
+            expectation.fulfill()
+        }
+        client.onFailure = { (_: Int?, _: String?) -> Void in
+            XCTFail("onFailure handler was not supposed to be called")
+        }
+        client.fetch()
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testFetchBiketownOnError() {
+        let mockConfiguration = MockConfiguration.init()
+        mockConfiguration.setStatusCode(400)
+        mockConfiguration.setError("Bad Request")
+        mockConfiguration.setDataResponse(TestData.biketownDataJSON.data)
+        mockConfiguration.setAPIURL(ServiceLocator.biketownConfig())
+        
+        let session = mockConfiguration.mockAPIResponse()
+        
+        let expectation = self.expectation(description: "onError handler called")
+        let client = ScooterClient(
+            sessionManager: session,
+            serviceLocatorURL: ServiceLocator.biketownConfig()
+        )
+        client.onSuccess = { (_: JSON?) -> Void in
+            XCTFail("onSuccess should not have been called")
+        }
+        client.onFailure = { (_: Int?, _: String? ) -> Void in
+            expectation.fulfill()
+        }
+        client.fetch()
+        
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testFetchBiketownInformationOnSuccess() {
+        let mockConfiguration = MockConfiguration.init()
+        mockConfiguration.setStatusCode(200)
+        mockConfiguration.setDataResponse(TestData.biketownInformationDataJSON.data)
+        mockConfiguration.setAPIURL(ServiceLocator.biketownInformationConfig())
+        
+        let session = mockConfiguration.mockAPIResponse()
+
+        let expectation = self.expectation(description: "The correct endpoint was called")
+        guard let expectedJSON = try? JSON(data: TestData.biketownInformationDataJSON.data) else { XCTFail("Failed to parse test JSON"); return }
+
+        let client = ScooterClient(
+            sessionManager: session,
+            serviceLocatorURL: ServiceLocator.biketownInformationConfig()
+        )
+        
+        client.onSuccess = { (actualResponse: JSON?) -> Void in
+            XCTAssertNotNil(actualResponse)
+            XCTAssertEqual(actualResponse, expectedJSON)
+            expectation.fulfill()
+        }
+        client.onFailure = { (_: Int?, _: String?) -> Void in
+            XCTFail("onFailure handler was not supposed to be called")
+        }
+        client.fetch()
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testFetchBiketownInformationOnError() {
+        let mockConfiguration = MockConfiguration.init()
+        mockConfiguration.setStatusCode(400)
+        mockConfiguration.setError("Bad Request")
+        mockConfiguration.setDataResponse(TestData.biketownInformationDataJSON.data)
+        mockConfiguration.setAPIURL(ServiceLocator.biketownInformationConfig())
+        
+        let session = mockConfiguration.mockAPIResponse()
+        
+        let expectation = self.expectation(description: "onError handler called")
+        let client = ScooterClient(
+            sessionManager: session,
+            serviceLocatorURL: ServiceLocator.biketownInformationConfig()
+        )
+        client.onSuccess = { (_: JSON?) -> Void in
+            XCTFail("onSuccess should not have been called")
+        }
+        client.onFailure = { (_: Int?, _: String? ) -> Void in
+            expectation.fulfill()
+        }
+        client.fetch()
+        
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testFetchBiketownStatusOnSuccess() {
+        let mockConfiguration = MockConfiguration.init()
+        mockConfiguration.setStatusCode(200)
+        mockConfiguration.setDataResponse(TestData.biketownStatusDataJSON.data)
+        mockConfiguration.setAPIURL(ServiceLocator.biketownStatusConfig())
+        
+        let session = mockConfiguration.mockAPIResponse()
+
+        let expectation = self.expectation(description: "The correct endpoint was called")
+        guard let expectedJSON = try? JSON(data: TestData.biketownStatusDataJSON.data) else { XCTFail("Failed to parse test JSON"); return }
+
+        let client = ScooterClient(
+            sessionManager: session,
+            serviceLocatorURL: ServiceLocator.biketownStatusConfig()
+        )
+        
+        client.onSuccess = { (actualResponse: JSON?) -> Void in
+            XCTAssertNotNil(actualResponse)
+            XCTAssertEqual(actualResponse, expectedJSON)
+            expectation.fulfill()
+        }
+        client.onFailure = { (_: Int?, _: String?) -> Void in
+            XCTFail("onFailure handler was not supposed to be called")
+        }
+        client.fetch()
+
+        wait(for: [expectation], timeout: 2.0)
+    }
+    
+    func testFetchBiketownStatusOnError() {
+        let mockConfiguration = MockConfiguration.init()
+        mockConfiguration.setStatusCode(400)
+        mockConfiguration.setError("Bad Request")
+        mockConfiguration.setDataResponse(TestData.biketownStatusDataJSON.data)
+        mockConfiguration.setAPIURL(ServiceLocator.biketownStatusConfig())
+        
+        let session = mockConfiguration.mockAPIResponse()
+        
+        let expectation = self.expectation(description: "onError handler called")
+        let client = ScooterClient(
+            sessionManager: session,
+            serviceLocatorURL: ServiceLocator.biketownStatusConfig()
+        )
+        client.onSuccess = { (_: JSON?) -> Void in
+            XCTFail("onSuccess should not have been called")
+        }
+        client.onFailure = { (_: Int?, _: String? ) -> Void in
+            expectation.fulfill()
+        }
+        client.fetch()
+        
+        wait(for: [expectation], timeout: 2.0)
+    }
 }

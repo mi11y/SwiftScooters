@@ -21,7 +21,6 @@ class ScooterClient: Client {
         guard let urlString = self.serviceLocatorConfi.string else { return }
         guard let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else { return }
         guard let url = URL(string: encoded) else { return }
-                
         
         sessionManager.request(url).responseString { response in
             self.handleResponse(response)

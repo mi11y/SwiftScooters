@@ -1,0 +1,45 @@
+{
+    "data": {
+        "bikes": [
+            {
+                "type": "electric_bike",
+                "lat": 45.5718355,
+                "is_disabled": 0,
+                "bike_id": "d75631ae3c0a80203a892c35c780e233",
+                "is_reserved": 0,
+                "name": "d75631ae3c0a80203a892c35c780e233",
+                "rental_uris": {
+                    "ios": "https://pdx.lft.to/lastmile_qr_scan",
+                    "android": "https://pdx.lft.to/lastmile_qr_scan"
+                },
+                "lon": -122.64238466666667
+            },
+            {
+                "type": "electric_bike",
+                "lat": 45.50001366666667,
+                "is_disabled": 0,
+                "bike_id": "3fa658ac76071a5d919e53dcaf3d4128",
+                "is_reserved": 0,
+                "name": "3fa658ac76071a5d919e53dcaf3d4128",
+                "rental_uris": {
+                    "ios": "https://pdx.lft.to/lastmile_qr_scan",
+                    "android": "https://pdx.lft.to/lastmile_qr_scan"
+                },
+                "lon": -122.57904316666666
+            },
+            {
+                "type": "electric_bike",
+                "lat": 45.59125383333333,
+                "is_disabled": 0,
+                "bike_id": "38f7c5589502b0a038737ce872b024fc",
+                "is_reserved": 0,
+                "name": "38f7c5589502b0a038737ce872b024fc",
+                "rental_uris": {
+                    "ios": "https://pdx.lft.to/lastmile_qr_scan",
+                    "android": "https://pdx.lft.to/lastmile_qr_scan"
+                },
+                "lon": -122.73546466666667
+            }
+        ]
+    }
+}

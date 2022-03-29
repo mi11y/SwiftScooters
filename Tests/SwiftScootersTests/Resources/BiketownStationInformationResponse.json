@@ -1,0 +1,75 @@
+{
+    "data": {
+        "stations": [
+            {
+                "station_id": "1586806470079603222",
+                "region_code": "PDX",
+                "eightd_has_key_dispenser": false,
+                "rental_uris": {
+                    "ios": "https://pdx.lft.to/lastmile_qr_scan",
+                    "android": "https://pdx.lft.to/lastmile_qr_scan"
+                },
+                "station_type": "lightweight",
+                "lon": -122.6854322,
+                "eightd_station_services": [],
+                "capacity": 4,
+                "lat": 45.5105937,
+                "name": "Shattuck Hall",
+                "electric_bike_surcharge_waiver": false,
+                "dockless_bikes_parking_zone_capacity": 4,
+                "has_kiosk": false,
+                "address": "Portland State University, 724, South Hooker Street, South Portland, Portland, Multnomah County, Oregon, 97201, United States",
+                "rack_model": "CITY_PUBLIC_RACK",
+                "external_id": "motivate_PDX_1586806470079603222",
+                "legacy_id": "1586806470079603222",
+                "client_station_id": "motivate_PDX_1586806470079603222"
+            },
+            {
+                "station_id": "1459024287353491654",
+                "region_code": "PDX",
+                "eightd_has_key_dispenser": false,
+                "rental_uris": {
+                    "ios": "https://pdx.lft.to/lastmile_qr_scan",
+                    "android": "https://pdx.lft.to/lastmile_qr_scan"
+                },
+                "station_type": "lightweight",
+                "lon": -122.5933109,
+                "eightd_station_services": [],
+                "capacity": 10,
+                "lat": 45.5464321,
+                "name": "NE 68th at Sandy",
+                "electric_bike_surcharge_waiver": false,
+                "dockless_bikes_parking_zone_capacity": 10,
+                "has_kiosk": false,
+                "address": "3236, Northeast 68th Avenue, Roseway, Portland, Multnomah County, Oregon, 97213, United States of America",
+                "rack_model": "CITY_PILOT_RACK",
+                "external_id": "motivate_PDX_1459024287353491654",
+                "legacy_id": "1459024287353491654",
+                "client_station_id": "motivate_PDX_1459024287353491654"
+            },
+            {
+                "station_id": "1440913816920179552",
+                "region_code": "PDX",
+                "eightd_has_key_dispenser": false,
+                "rental_uris": {
+                    "ios": "https://pdx.lft.to/lastmile_qr_scan",
+                    "android": "https://pdx.lft.to/lastmile_qr_scan"
+                },
+                "station_type": "lightweight",
+                "lon": -122.6769716,
+                "eightd_station_services": [],
+                "capacity": 12,
+                "lat": 45.54107815,
+                "name": "N Russell at Interstate",
+                "electric_bike_surcharge_waiver": false,
+                "dockless_bikes_parking_zone_capacity": 12,
+                "has_kiosk": false,
+                "address": "Widmer Brothers Brewing, 955, North Russell Street, Albina, Eliot, Portland, Multnomah County, Oregon, 97227, United States of America",
+                "rack_model": "CITY_PUBLIC_RACK",
+                "external_id": "motivate_PDX_1440913816920179552",
+                "legacy_id": "1440913816920179552",
+                "client_station_id": "motivate_PDX_1440913816920179552"
+            }
+        ]
+    }
+}
