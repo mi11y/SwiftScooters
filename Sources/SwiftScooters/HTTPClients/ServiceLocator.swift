@@ -16,6 +16,20 @@ public class ServiceLocator {
         return components
     }
     
+    public static func birdConfig() -> URLComponents {
+        var components  = initURLComponents()
+        components.host = "mds.bird.co"
+        components.path = "/gbfs/portland/free_bike_status.json"
+        return components
+    }
+    
+    public static func boltConfig() -> URLComponents {
+        var components  = initURLComponents()
+        components.host = "api-lb.micromobility.com"
+        components.path = "/ptl/gbfs/en/free_bike_status.json"
+        return components
+    }
+    
     private static func initURLComponents() -> URLComponents {
         var components = URLComponents()
         components.scheme = "http"

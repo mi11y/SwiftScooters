@@ -33,7 +33,9 @@ let package = Package(
             dependencies: ["SwiftScooters", "Alamofire", "SwiftyJSON", "Mocker"],
             resources: [
                 .copy("Resources/LimeScooterResponse.json"),
-                .copy("Resources/SpinScooterResponse.json")
+                .copy("Resources/SpinScooterResponse.json"),
+                .copy("Resources/BirdScooterResponse.json"),
+                .copy("Resources/BoltScooterResponse.json"),
             ]
         ),
     ]

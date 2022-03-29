@@ -17,7 +17,7 @@ class ScooterClient: Client {
         self.serviceLocatorConfi = config
     }
 
-    func fetch() {
+    public func fetch() {
         guard let urlString = self.serviceLocatorConfi.string else { return }
         guard let encoded = urlString.addingPercentEncoding(withAllowedCharacters: .urlFragmentAllowed) else { return }
         guard let url = URL(string: encoded) else { return }
