@@ -2,6 +2,7 @@
 import XCTest
 import Foundation
 import SwiftyJSON
+import SwiftHelpers
 
 @testable import SwiftScooters
 
