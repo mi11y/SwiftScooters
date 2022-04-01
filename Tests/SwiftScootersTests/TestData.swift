@@ -12,6 +12,11 @@ public final class TestData {
     public static let spinDataJSON: URL = Bundle.module.url(forResource: "SpinScooterResponse", withExtension: "json")!
     public static let birdDataJSON: URL = Bundle.module.url(forResource: "BirdScooterResponse", withExtension: "json")!
     public static let boltDataJSON: URL = Bundle.module.url(forResource: "BoltScooterResponse", withExtension: "json")!
+    public static let biketownDataJSON: URL = Bundle.module.url(forResource: "BiketownResponse", withExtension: "json")!
+    public static let biketownInformationDataJSON: URL = Bundle.module.url(forResource: "BiketownStationInformationResponse", withExtension: "json")!
+    public static let biketownStatusDataJSON: URL = Bundle.module.url(forResource: "BiketownStatusInformation", withExtension: "json")!
+
+
 }
 
 internal extension URL {

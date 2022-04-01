@@ -30,6 +30,27 @@ public class ServiceLocator {
         return components
     }
     
+    public static func biketownConfig() -> URLComponents {
+        var components  = initURLComponents()
+        components.host = "gbfs.biketownpdx.com"
+        components.path = "/gbfs/en/free_bike_status.json"
+        return components
+    }
+    
+    public static func biketownInformationConfig() -> URLComponents {
+        var components  = initURLComponents()
+        components.host = "gbfs.biketownpdx.com"
+        components.path = "/gbfs/en/station_information.json"
+        return components
+    }
+    
+    public static func biketownStatusConfig() -> URLComponents {
+        var components  = initURLComponents()
+        components.host = "gbfs.biketownpdx.com"
+        components.path = "/gbfs/en/station_status.json"
+        return components
+    }
+    
     private static func initURLComponents() -> URLComponents {
         var components = URLComponents()
         components.scheme = "http"
