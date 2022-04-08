@@ -28,7 +28,8 @@ let package = Package(
         .target(
             name: "SwiftScooters",
             dependencies: ["Alamofire",
-                           "SwiftyJSON"]),
+                           "SwiftyJSON",
+                          "SwiftHelpers"]),
         .testTarget(
             name: "SwiftScootersTests",
             dependencies: ["SwiftScooters", "Alamofire", "SwiftyJSON", "Mocker", "SwiftHelpers"],

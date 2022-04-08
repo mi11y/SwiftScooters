@@ -7,11 +7,10 @@ import SwiftHelpers
 @testable import SwiftScooters
 
 class ClientTests: XCTestCase {
-    
     func testConformsToScooterClient() {
         let expectation = self.expectation(description: "It conforms to the protocol")
         
-        if ScooterClient.self is Client.Type {
+        if ScooterClient.self is HTTPClient.Type {
             expectation.fulfill()
         }
         
@@ -23,6 +22,7 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.limeDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.limeConfig())
+        mockConfiguration.ignoreQuery = true
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -52,6 +52,7 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.limeDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.limeConfig())
+        mockConfiguration.ignoreQuery = true
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
@@ -75,7 +76,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.spinDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.spinConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -105,7 +107,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.spinDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.spinConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
@@ -129,7 +132,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.birdDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.birdConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -159,7 +163,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.birdDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.birdConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
@@ -183,7 +188,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.boltDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.boltConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -213,7 +219,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.boltDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.boltConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
@@ -237,7 +244,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.biketownDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.biketownConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -267,7 +275,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.biketownDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.biketownConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
@@ -291,7 +300,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.biketownInformationDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.biketownInformationConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -321,7 +331,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.biketownInformationDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.biketownInformationConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
@@ -345,7 +356,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setStatusCode(200)
         mockConfiguration.setDataResponse(TestData.biketownStatusDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.biketownStatusConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
 
         let expectation = self.expectation(description: "The correct endpoint was called")
@@ -375,7 +387,8 @@ class ClientTests: XCTestCase {
         mockConfiguration.setError("Bad Request")
         mockConfiguration.setDataResponse(TestData.biketownStatusDataJSON.data)
         mockConfiguration.setAPIURL(ServiceLocator.biketownStatusConfig())
-        
+        mockConfiguration.ignoreQuery = true
+
         let session = mockConfiguration.mockAPIResponse()
         
         let expectation = self.expectation(description: "onError handler called")
